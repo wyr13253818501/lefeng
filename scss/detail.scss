@@ -1,0 +1,286 @@
+@import "main.scss";
+
+#cheader {
+    height: 44px;
+    width: 100%;
+    background: #eee;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 0 #000;
+    .commonHeader {
+        width: 100%;
+        height: 100%;
+        @include flexBox;
+        @include flex-direction("row");
+        text-align: center;
+        .title {
+            flex: 1;
+            font-size: 20px;
+            font-weight: bold;
+            @include flex-center;
+            i{
+                color: #666;
+            }
+        }
+        .name {
+            flex: 3;
+            @include flex-center;
+            p{
+                font-size: 20px;
+                color: #666;
+            }
+        }
+        .moreInfo {
+            flex: 1;
+            @include flex-center;
+           i{
+                font-size: 20px;
+                color: #666;
+           }
+        }
+        
+    }
+
+}
+
+#ccontent{
+    padding: 0;
+    position: relative;
+    overflow: auto;
+    background: #ccc;
+    #con{
+        width: 100%;
+    }
+    #one{
+        width:100%;
+        height: 200px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    #two{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        a{
+            display: block;
+            height: 50px;
+            color: #222;
+            font-size: 16px;
+            line-height: 50px;
+            padding-left: 12px;
+        }
+    }
+    #three{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        
+        a{
+            color: crimson;
+            font-size: 30px;
+            line-height: 40px;
+            padding-left: 14px;
+            &:nth-of-type(2){
+                color: #888;
+                padding-left: 20px;
+                font-size: 14px;
+                text-decoration: line-through;
+            }
+        }
+    }
+    .four,#flower{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #eee;
+        border-top: 1px solid #eee;
+        padding-left: 14px;
+        a{
+            line-height: 40px;
+            text-align: center;                   
+            &:nth-of-type(1){
+                display: inline-block;
+                width: 60px;
+                height: 20px;
+                line-height: 20px;
+                margin-top: 10px;
+                border-radius: 5px;
+                background: crimson;
+                color: #fff;
+                font-size: 14px;
+            }
+            &:nth-of-type(2){
+                padding: 12px;
+                font-size: 14px;
+                color: #666;
+            }
+        }
+    }
+    
+    #blank{
+        width: 100%;
+        background: #bbb;
+        height: 5px;
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+    }
+    #commont{
+        p{
+           @include flexBox;
+           width: 100%;
+           height: 60px;
+           border-bottom: 1px solid #ddd;
+           line-height: 60px;
+           color: #666;
+           &:nth-of-type(1){
+               height: 30px;
+               line-height: 30px;
+           }
+           a{
+               flex: 1;
+               padding-left: 20px;
+               font-size: 16px;
+           } 
+           span{
+               flex: 1;
+               padding-left: 40px;
+               font-size: 16px;
+           }
+        }
+    }
+    
+    #tab{
+        width: 100%;
+        .tab-one{
+          @include flexBox;
+          width: 100%;
+          height: 50px;
+          border-bottom: 1px solid #ddd;
+          li{
+              flex: 1;
+              text-align: center;
+              line-height: 50px;
+          }
+          .active{
+              border-bottom: 1px solid crimson;
+          }  
+        }
+        
+        .tab-two{
+            width: 100%;
+            padding: 5px;
+            li{
+                display: none;
+                
+            }
+            .show{
+                border: 1px solid #eee;
+                display: block;
+                
+                .msg{
+                    width: 100%;
+                    height: 30px;
+                    line-height: 30px;
+                    border-bottom: 1px solid #ddd;
+                    @include flexBox;
+                    a{
+                        font-size: 14px;
+                        color: #666;
+                        text-align: center;
+                        display:inline-block; 
+                        &:nth-of-type(1){
+                            flex: 1;
+                            background: #bbb;
+                        }
+                        &:nth-of-type(2){
+                            flex: 2;
+                        }
+                    }
+                }
+                
+                .click{
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    color: #666;
+                    font-size: 20px;
+                    text-align: center;
+                }
+                .pic{
+                    width: 100%;
+                    display: none;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                
+                h6{
+                    height: 40px;
+                    line-height: 40px;
+                    color: #666;
+                    text-align: center;
+                }
+                p{
+                    font-size: 14px;
+                    text-indent: 28px;
+                    color: #999;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    #addCart{
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        @include flexBox;
+        .add-left{
+            flex: 3;
+            background: rgba(0,0,0,.5);
+            i{
+                line-height: 50px;
+                color: #fff;
+                font-size: 30px;
+                padding-left: 12px;
+                font-weight: normal;
+            }
+            .red{
+                width: 18px;
+                height: 18px;
+                border-radius: 100px;
+                background: crimson;
+                color: #fff;
+                font-size: 14px;
+                position: absolute;
+                left: 30px;
+                top: 6px;
+                line-height: 18px;
+                text-align: center;
+                display: none;
+            }
+        }
+        .add-right{
+            flex: 1;
+            background: crimson;
+            p{
+                color: #fff;
+                text-align: center;
+                line-height: 50px;
+            }
+        }
+    }
+}
+

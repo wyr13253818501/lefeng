@@ -1,0 +1,100 @@
+@import "main.scss";//工具类css----兼容性
+
+
+
+#sheader {
+    height: 44px;
+    width: 100%;
+    background: #ddd;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+    .commonHeader {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @include flexBox;
+        @include flex-direction("row");
+        text-align: center;
+        .search {
+            flex: 5;
+            font-size: 20px;
+            font-weight: bold;
+            @include flex-center;
+            #text{
+                width: 250px;
+                height: 25px;
+                border: 0;
+                
+                padding-left:5px;
+            }
+        }
+        .cancle {
+            flex: 1;
+            @include flex-center;
+            p{
+                width: 40px;
+                height: 30px;
+                border: 1px solid #f66;
+                font-size: 16px;
+                font-weight: normal;
+                text-align: center;
+                line-height: 30px;
+                color: #f66;
+            }
+        }
+        .index {
+            flex: 1;
+            @include flex-center;
+           i{
+                font-size: 30px;
+                color: #aaa;
+           }
+        }
+        
+    }
+
+}
+#scontent {
+    width: 100%;
+    overflow: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @include flex(1);
+    background:#ddd;
+    
+    h5{
+        margin-top: 10px;
+        margin-left: 10px;
+        line-height: 40px;
+        color: #999;
+    }
+    .aList{
+        margin-left: 10px;
+        a{
+            padding: 7px 10px 7px 10px;        
+            display: inline-block;
+            border: 1px solid #aaa;
+            text-align: center;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .color1{
+            color:red;
+            border-color: red;
+        }
+    }    
+    .searchList{
+            display: none;
+            li{
+                line-height: 30px;
+                width: 100%;
+                border-bottom: 1px solid #aaa;
+                color: #050D20;
+            }
+            
+        }
+}

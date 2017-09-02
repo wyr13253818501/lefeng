@@ -1,0 +1,180 @@
+@import "main.scss";
+
+#gcheader {
+    height: 44px;
+    width: 100%;
+    background: #eee;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+    .commonHeader {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @include flexBox;
+        @include flex-direction("row");
+        text-align: center;
+        .title {
+            flex: 1;
+            font-size: 20px;
+            font-weight: bold;
+            @include flex-center;
+            color: #666;
+        }
+        .box {
+            flex: 3;
+            @include flex-center;
+            p{
+                font-size: 16px;
+                font-weight: normal;
+                text-align: center;
+                line-height: 30px;
+                color: #666;
+            }
+        }
+        .moreInfo {
+            flex: 1;
+            @include flex-center;
+           i{
+                font-size: 30px;
+                color: #aaa;
+           }
+        }
+        
+    }
+
+}
+
+#ccontent{
+    background-color: #ccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    #dis{
+        padding: 30px 10px;
+        i{
+            display: block;
+            margin: 0 auto;
+            background-repeat: no-repeat;
+            width: 100px;height: 100px;
+            background-image: url(../img/3.png);
+            background-size: contain;
+        }
+        p{
+            margin-top: 10px;
+            line-height: 30px;
+            color: #bbb;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .backHome{
+            width: 120px;
+            height: 50px;          
+            background: crimson;
+            margin: 20px auto;
+            border-radius: 5px;
+            p{
+                a{
+                    color: #fff;
+                    font-size: 20px;
+                    line-height: 50px;
+                    text-align: center;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+  
+      
+    #pro{      
+        li{
+            border-bottom: 1px solid #eee;
+            @include flexBox
+            width: 100%;
+            .left{
+                flex: 1;
+                padding: 10px;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .right{
+                flex: 3;
+                padding: 10px;
+                p{
+                    width: 100%;
+                    color: #999;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: left;
+                    &:nth-of-type(1){
+                        color:#bbb;
+                        font-size: 18px;
+                        a{                     
+                            height: 30px;
+                            line-height: 30px;
+                          
+                            color: #888;                        
+                            
+                        }
+                    }
+                    &:nth-of-type(2){
+                        text-align: left;
+                        padding-left: 12px;
+                    }
+                    &:nth-of-type(3){
+                        width: 90px;
+                        height: 32px;
+                        padding: 0;                      
+                        border: 1px solid #bbb;
+                        @include flexBox;
+                       span{
+                           display: inline-block;
+                           width: 30px;
+                           height: 30px;
+                           border-right: 1px solid #bbb;
+                           text-align: center;
+                       }
+                        
+                    }
+                    &:nth-of-type(4){
+                        width: 30px;
+                        font-size: 26px;
+                        text-align: right;
+                        padding-left: 180px;
+                    }
+                }
+            }
+        }      
+    }
+    
+ .total{
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        border-top: 1px solid #ddd;
+        height: 50px;
+        @include flexBox;
+        .total-left{
+           flex: 3;
+           background: #fff;
+           color: #000;
+           font-size: 20px;
+           line-height: 50px;
+           padding-left: 18px;
+        }
+        .total-right{
+           flex: 1;
+           background: crimson;
+           color: #fff;
+           font-size: 20px;
+           line-height: 50px;
+           text-align: center;
+        }
+    }
+}
+
